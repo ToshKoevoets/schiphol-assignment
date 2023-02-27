@@ -1,9 +1,9 @@
 # Schiphol Test
 
 ## Getting started
-2. npm i
+1. npm i
 
-3. npm start
+2. npm start
 
 ## Notes
 Created with create-react-app.
@@ -22,13 +22,13 @@ I've done the filtering & sorting on the frontend, but normally would most likel
 The api is setup via setupProxy.
 
 ### CSS
-I've not used any CSS lib like css modules or css typescript, performance wise CSS is better in an external file. Not used scss for this project. 
+I've not used any CSS lib like css modules or css typescript, performance wise CSS is better in an external file. But inline styles or styled components could be better. Not used scss for this project. 
 
 ### Browser support
-Only tested on latest browsers: Chrome, FireFox & Safari
+Only tested on latest Chrome
 
 ###  Tests
-Added some small test to give an idea. 
+Wrote 2 simple example tests for the SearchFlightItem to SearchFlightItem.test.tsx.
 
 To get test coverage run:
 

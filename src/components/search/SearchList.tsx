@@ -14,9 +14,7 @@ const propTypes = {
 
 type ComponentTypes = InferProps<typeof propTypes>;
 
-const SearchList: React.FC<ComponentTypes> = ({ flights }) => {
-  console.log('Rendering SearchList', flights);
-  
+const SearchList: React.FC<ComponentTypes> = ({ flights }) => {  
   return <div className="search-list">
     {flights.length > 0 ?
       <>

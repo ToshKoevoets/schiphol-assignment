@@ -13,9 +13,3 @@
   align-items: center;
   padding: 15px 0;
 }
-
-@media screen and (max-width: 600px) {
-  .search-results__details {
-    flex-direction: column;
-  }
-}

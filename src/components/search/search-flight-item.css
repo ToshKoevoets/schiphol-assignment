@@ -11,7 +11,6 @@
   text-decoration: none;
   text-transform: none;
   transition: all 0.2s ease-in-out;
-  padding: 10px;
   margin: 20px 0;
   border-radius: 5px;
   border: 1px solid var(--light-grey);
