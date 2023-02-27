@@ -11,7 +11,7 @@ const apiBase = '/api';
  * Get all flights
  * @returns array of flights
  */
-const getFlights = (): Promise<Flight[]> => {
+export const getAllFlights = (): Promise<Flight[]> => {
   return fetch(`${apiBase}/flights`)
     .then(data => data.json())
 }
@@ -23,7 +23,7 @@ const getFlights = (): Promise<Flight[]> => {
  * @param searchTerm 
  * @returns array of flights
  */
-const searchFlights = (flights: Flight[], searchTerm: string): Flight[] => {
+export const searchFlights = (flights: Flight[], searchTerm: string): Flight[] => {
   return flights.filter((flight: Flight) => {
     return flight.airport.toLowerCase().includes(searchTerm.toLowerCase());
   });
@@ -36,7 +36,7 @@ const searchFlights = (flights: Flight[], searchTerm: string): Flight[] => {
  * @param sortByDate 
  * @returns array of flights
  */
-const sortFlights = (flights: Flight[], sortByDate: SortTypes.ASC | SortTypes.DESC): Flight[] => {
+export const sortFlights = (flights: Flight[], sortByDate: SortTypes.ASC | SortTypes.DESC): Flight[] => {
   return flights.sort((a: Flight, b: Flight) => {
     /**
      * We have to parse the expectedTime string into a Date object
@@ -60,10 +60,4 @@ const sortFlights = (flights: Flight[], sortByDate: SortTypes.ASC | SortTypes.DE
         return 0;
     }
   });
-}
-
-exports = {
-  getFlights,
-  searchFlights,
-  sortFlights
 }

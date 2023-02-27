@@ -35,3 +35,5 @@ To get test coverage run:
 ```
 npm run test:coverage
 ```
+
+When more time sorting & searching would be good candidates for unit tests.

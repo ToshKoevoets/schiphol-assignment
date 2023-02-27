@@ -4,7 +4,6 @@
 import React from 'react';
 import PropTypes, { InferProps } from 'prop-types';
 import SearchFlightItem from './SearchFlightItem';
-// import { Flight } from '../../types/Flight';
 import SearchNoResults from './SearchNoResults';
 import './search-list.css';
 

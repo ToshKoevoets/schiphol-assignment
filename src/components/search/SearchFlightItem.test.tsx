@@ -21,7 +21,7 @@ test('When Rendering a Flight Item should display Flight number', (): void => {
     {...dummyFlightData}
   />);
 
-  const flightNrElement = screen.getByText(/flightNumber/i);
+  const flightNrElement = screen.getByText(/flightIdentifier/i);
   expect(flightNrElement).toBeInTheDocument();
 });
 

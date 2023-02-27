@@ -2,7 +2,8 @@
  * Component responsible for managing data and state for the SearchBar and SearchList
  */
 import React, { useEffect, useState } from 'react';
-import FlightsService from '../../services/FlightsService';
+import { searchFlights, sortFlights, getAllFlights } from '../../services/FlightsService';
+
 import { Flight } from '../../types/Flight';
 import SearchList from './SearchList';
 import SearchBar from './SearchBar';
@@ -27,7 +28,7 @@ const SearchContainer: React.FC = () => {
   const getFlights = async () => {
     try {
       setLoading(true);
-      const allFlights = await FlightsService.getFlights();
+      const allFlights = await getAllFlights();
       setAllFlights(allFlights);
       setLoading(false);
     } catch (e) {
@@ -50,8 +51,8 @@ const SearchContainer: React.FC = () => {
    */
   useEffect(() => {    
     if (searchTerm.length >= minimumCharactersForSearch ) {
-      const searchResults = FlightsService.searchFlights(allFlights, searchTerm);
-      const sortedResults = FlightsService.sortFlights(searchResults, sortOrder);
+      const searchResults = searchFlights(allFlights, searchTerm);
+      const sortedResults = sortFlights(searchResults, sortOrder);
       setSearchedFlights(sortedResults.slice(0, defaultMaxResultsPerPage));
     } else {
       setSearchedFlights([]);
