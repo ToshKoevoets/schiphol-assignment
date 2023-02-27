@@ -5,7 +5,7 @@ import React from 'react';
 
 const SearchNoResults: React.FC = () => {
   return <div className="search-no-results">
-    <h4>Geen Resultaten</h4>
+    <h4>No results</h4>
   </div>
 }
 

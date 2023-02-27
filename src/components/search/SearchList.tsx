@@ -12,8 +12,6 @@ const propTypes = {
   flights: PropTypes.array.isRequired,
 };
 
-//: [Flight] type not possible  in this case?
-
 type ComponentTypes = InferProps<typeof propTypes>;
 
 const SearchList: React.FC<ComponentTypes> = ({ flights }) => {
@@ -22,7 +20,6 @@ const SearchList: React.FC<ComponentTypes> = ({ flights }) => {
   return <div className="search-list">
     {flights.length > 0 ?
       <>
-        <p>{flights.length} flights found </p>
         {flights.map((flight, index) => {
           return <SearchFlightItem
             key={index}

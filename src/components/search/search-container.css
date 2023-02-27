@@ -1,0 +1,21 @@
+.search-container {
+  padding: 15px;
+}
+
+.search-container__content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.search-results__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .search-results__details {
+    flex-direction: column;
+  }
+}

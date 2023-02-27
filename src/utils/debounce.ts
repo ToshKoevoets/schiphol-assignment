@@ -1,10 +1,7 @@
-
-export default debounce(func, timeout = 300) {
-  let timer;
-
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => { func.apply(this, args); }, timeout);
-  };
-
+export function debounce<F extends (...params: any[]) => void>(fn: F, delay: number) {
+  let timeoutID: number | undefined;
+  return function (this: any, ...args: any[]) {
+    clearTimeout(timeoutID);
+    timeoutID = window.setTimeout(() => fn.apply(this, args), delay);
+  } as F;
 }

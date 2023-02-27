@@ -3,10 +3,11 @@
  */
 import React from 'react';
 import './header.css';
+import logo from '../../logo.svg';
 
 const Header: React.FC = () => {
   return <header>
-    <h1>Schiphol</h1>
+    <img src={logo} className="App-logo" alt="logo" />
   </header>
 }
 

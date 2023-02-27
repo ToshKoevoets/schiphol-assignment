@@ -3,10 +3,7 @@
  */
 import { Flight } from "../types/Flight";
 
-enum SortTypes {
-  ASC = "ASC",
-  DESC = "DESC",
-}
+import { SortTypes } from "../types/Sort";
 
 export default class FlightsService {
   private static apiBase = '/api';
@@ -15,7 +12,6 @@ export default class FlightsService {
     return fetch(`${this.apiBase}/flights`)
       .then(data => data.json())
   }
-
 
   public static searchFlights(flights: Flight[], searchTerm: string): Flight[] {
     return flights.filter((flight: Flight) => {
@@ -29,15 +25,14 @@ export default class FlightsService {
        * We have to parse the expectedTime string into a Date object
        * Should maybe be moved to a normalizer in the api service, or have the api return a full Date string
        */
-      const aHours = parseInt(a.expectedTime.split(':')[0], 10);
-      const aMinutes = parseInt(a.expectedTime.split(':')[1], 10);
+      const aHours :number = parseInt(a.expectedTime.split(':')[0], 10);
+      const aMinutes: number = parseInt(a.expectedTime.split(':')[1], 10);
       const aExpectedArrivalDateTime = new Date().setHours(aHours, aMinutes);
 
-      const bHours = parseInt(b.expectedTime.split(':')[0], 10);
-      const bMinutes = parseInt(b.expectedTime.split(':')[1], 10);
+      const bHours :number = parseInt(b.expectedTime.split(':')[0], 10);
+      const bMinutes :number  = parseInt(b.expectedTime.split(':')[1], 10);
       const bExpectedArrivalDateTime = new Date().setHours(bHours, bMinutes);
 
-      console.log('SortTypes', sortByDate)
 
       switch (sortByDate) {
         case SortTypes.ASC:
@@ -49,5 +44,4 @@ export default class FlightsService {
       }
     });
   }
-
 }
