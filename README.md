@@ -11,7 +11,7 @@ Created with create-react-app.
 ### Project Structure
 I've set up a basic but simple structure seperating screens, services, hooks & components per feature. 
 
-Overall it's a bit of an overkill for such a small project, but I did to give an idea of how to possibly structure a bigger project. 
+Overall it's a bit of an overkill for such a small project, but I tried to give an idea of how to possibly structure a bigger project. 
 
 Same with React.memo, it won't have any effect, but in my experience it's better to add it in the start of a project then to start adding when performance becomes an issue.
 
