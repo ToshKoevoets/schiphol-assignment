@@ -22,7 +22,7 @@ I've done the filtering & sorting on the frontend, but normally would most likel
 The api is setup via setupProxy.
 
 ### CSS
-I've not used any CSS lib like css modules or css typescript, performance wise CSS is better in an external file. But inline styles or styled components could be better. Not used scss for this project. 
+I've not used any CSS lib like css modules or css typescript, performance wise CSS is better in an external file. But inline styles or styled components could give better control for larger projects. Dont have a strong preference. Not used scss for this project. 
 
 ### Browser support
 Only tested on the latest Chrome.
