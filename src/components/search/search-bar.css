@@ -13,7 +13,6 @@
 .search-bar__input::placeholder {
   font-weight: bold;
   opacity: 0.5;
-  color: -var(--dark-blue);
   font-size: 15px;
 }
 
@@ -41,6 +40,10 @@
   color: var(--lightmorning-blue);
   right: 15px;
   top: 18px;
+}
+
+.search-bar__clear:focus {
+  outline: 2px solid var(--lightmorning-blue);
 }
 
 .search-bar__wrapper {
